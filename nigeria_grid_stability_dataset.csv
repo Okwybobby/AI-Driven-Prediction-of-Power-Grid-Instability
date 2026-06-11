@@ -1,0 +1,124 @@
+Record_ID,Dataset_Section,Source_Paper,Sim_Time_s,Bus_ID,Bus_Name,Frequency_Hz,Voltage_pu,Voltage_kV,Angle_deg,Active_Power_MW,Reactive_Power_MVAr,Ambient_Temp_C,Grid_State,Stability_Label,Voltage_Estimated,Reactive_Estimated
+1,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,15.0010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.60,0.9702,320.2,26.23,404.691,243.30,33,Stable,0,TRUE,TRUE
+2,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,15.1010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.81,0.9702,320.2,15.35,375.675,225.81,33,Stable,0,TRUE,TRUE
+3,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,15.2010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.97,0.9702,320.2,11.75,419.156,251.99,33,Stable,0,TRUE,TRUE
+4,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,15.3010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.94,0.9702,320.2,10.69,470.892,282.99,33,Stable,0,TRUE,TRUE
+5,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,15.4010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.85,0.9702,320.2,6.86,452.193,271.74,33,Stable,0,TRUE,TRUE
+6,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,15.5010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.93,0.9702,320.2,2.30,388.019,233.25,33,Stable,0,TRUE,TRUE
+7,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,15.6010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.20,0.9702,320.2,4.35,358.006,215.23,33,Stable,0,TRUE,TRUE
+8,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,15.7010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.41,0.9702,320.2,15.91,401.076,241.09,33,Stable,0,TRUE,TRUE
+9,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,15.8010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.41,0.9702,320.2,31.61,478.041,287.36,33,Stable,0,TRUE,TRUE
+10,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,15.9010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.19,0.9702,320.2,42.96,522.184,313.94,33,Stable,0,TRUE,TRUE
+11,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,16.0010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.96,0.9702,320.2,45.35,487.498,293.06,33,Stable,0,TRUE,TRUE
+12,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,16.1010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.93,0.9702,320.2,42.63,419.380,252.14,33,Stable,0,TRUE,TRUE
+13,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,16.2010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.04,0.9702,320.2,41.96,414.284,249.07,33,Stable,0,TRUE,TRUE
+14,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,16.3010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.02,0.9702,320.2,43.67,484.188,291.07,33,Stable,0,TRUE,TRUE
+15,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,16.4010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.80,0.9702,320.2,40.63,515.325,309.81,33,Stable,0,TRUE,TRUE
+16,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,16.5010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.64,0.9702,320.2,29.77,457.541,275.00,33,Stable,0,TRUE,TRUE
+17,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,16.6010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.71,0.9702,320.2,17.30,391.025,235.04,33,Stable,0,TRUE,TRUE
+18,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,16.7010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.92,0.9702,320.2,10.52,380.901,228.96,33,Stable,0,TRUE,TRUE
+19,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,16.8010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.05,0.9702,320.2,10.44,429.006,257.91,33,Stable,0,TRUE,TRUE
+20,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,16.9010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,0.9702,320.2,11.80,473.416,284.61,33,Stable,0,TRUE,TRUE
+21,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,17.0010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.92,0.9702,320.2,10.09,445.152,267.61,33,Stable,0,TRUE,TRUE
+22,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,17.1010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.01,0.9702,320.2,8.29,389.235,234.03,33,Stable,0,TRUE,TRUE
+23,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,17.2010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.21,0.9702,320.2,12.26,381.552,229.37,33,Stable,0,TRUE,TRUE
+24,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,17.3010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.34,0.9702,320.2,22.67,429.873,258.43,33,Stable,0,TRUE,TRUE
+25,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,17.4010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.27,0.9702,320.2,34.11,486.963,292.72,33,Stable,0,TRUE,TRUE
+26,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,17.5010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.09,0.9702,320.2,40.49,490.646,294.93,33,Stable,0,TRUE,TRUE
+27,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,17.6010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,0.9702,320.2,41.47,444.529,267.16,33,Stable,0,TRUE,TRUE
+28,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,17.7010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.03,0.9702,320.2,41.79,427.603,257.10,33,Stable,0,TRUE,TRUE
+29,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,17.8010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.02,0.9702,320.2,43.11,468.383,281.58,33,Stable,0,TRUE,TRUE
+30,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,17.9010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.87,0.9702,320.2,41.32,496.284,298.29,33,Stable,0,TRUE,TRUE
+31,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,18.0010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.72,0.9702,320.2,33.61,467.595,281.11,33,Stable,0,TRUE,TRUE
+32,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,18.1010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.72,0.9702,320.2,23.09,422.404,253.94,33,Stable,0,TRUE,TRUE
+33,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,18.2010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.83,0.9702,320.2,14.76,405.576,243.83,33,Stable,0,TRUE,TRUE
+34,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,18.3010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.93,0.9702,320.2,10.49,422.148,253.79,33,Stable,0,TRUE,TRUE
+35,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,18.4010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.95,0.9702,320.2,8.53,441.645,265.46,33,Stable,0,TRUE,TRUE
+36,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,18.5010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.96,0.9702,320.2,6.89,430.834,259.02,33,Stable,0,TRUE,TRUE
+37,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,18.6010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.05,0.9702,320.2,6.75,401.958,241.66,33,Stable,0,TRUE,TRUE
+38,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,18.7010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.20,0.9702,320.2,11.10,395.301,237.67,33,Stable,0,TRUE,TRUE
+39,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,18.8010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.30,0.9702,320.2,20.44,426.891,256.61,33,Stable,0,TRUE,TRUE
+40,ETAP_S1_Stable,Oluseyi_et_al_NIJOTECH_2017,18.9010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.27,0.9702,320.2,31.15,473.166,284.38,33,Stable,0,TRUE,TRUE
+41,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,9.6000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,1.0000,330.0,20.13,441.590,265.44,33,Pre_Fault,0,TRUE,TRUE
+42,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,9.7000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,1.0000,330.0,20.13,441.592,265.44,33,Pre_Fault,0,TRUE,TRUE
+43,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,9.8000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,1.0000,330.0,20.13,441.588,265.44,33,Pre_Fault,0,TRUE,TRUE
+44,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,9.9000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,1.0000,330.0,20.13,441.588,265.44,33,Pre_Fault,0,TRUE,TRUE
+45,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,10.0000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,1.0000,330.0,20.12,441.593,265.44,33,Pre_Fault,0,TRUE,TRUE
+46,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,10.1000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,1.0000,330.0,20.12,441.589,265.44,33,Pre_Fault,0,TRUE,TRUE
+47,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,10.2000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,1.0000,330.0,20.12,441.576,265.44,33,Pre_Fault,0,TRUE,TRUE
+48,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,10.3000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,1.0000,330.0,20.12,441.571,265.44,33,Pre_Fault,0,TRUE,TRUE
+49,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,10.4000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,1.0000,330.0,20.12,441.578,265.44,33,Pre_Fault,0,TRUE,TRUE
+50,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,10.5000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,1.0000,330.0,20.12,441.586,265.44,33,Pre_Fault,0,TRUE,TRUE
+51,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,10.5010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,0.9700,320.1,20.12,481.262,289.27,33,Fault_Onset,1,TRUE,TRUE
+52,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,10.6010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.55,0.9700,320.1,11.33,488.420,293.72,33,Fault_Onset,1,TRUE,TRUE
+53,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,10.7010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.34,0.9300,306.9,-9.45,424.598,255.27,33,Unstable,1,TRUE,TRUE
+54,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,10.8010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.34,0.9300,306.9,-33.92,372.046,223.65,33,Unstable,1,TRUE,TRUE
+55,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,10.9010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.49,0.9300,306.9,-55.33,339.736,204.24,33,Unstable,1,TRUE,TRUE
+56,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,11.0010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.73,0.9300,306.9,-69.48,322.116,193.65,33,Unstable,1,TRUE,TRUE
+57,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,11.1010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.03,0.9300,306.9,-74.02,301.943,181.49,33,Unstable,1,TRUE,TRUE
+58,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,11.2010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.42,0.9300,306.9,-66.39,257.082,154.51,33,Unstable,1,TRUE,TRUE
+59,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,11.3010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),51.00,0.8000,264.0,-41.41,192.298,115.59,33,Unstable,1,TRUE,TRUE
+60,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,11.4010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),51.70,0.8000,264.0,7.35,196.001,117.82,33,Unstable,1,TRUE,TRUE
+61,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,11.5000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),52.24,0.8000,264.0,78.32,257.717,154.94,33,Unstable,1,TRUE,TRUE
+62,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,11.6010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),51.65,0.8000,264.0,147.08,448.308,269.55,33,Unstable,1,TRUE,TRUE
+63,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,11.8010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),52.88,0.8000,264.0,-67.33,32.179,19.34,33,Unstable,1,TRUE,TRUE
+64,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,12.0010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),53.87,0.8000,264.0,-160.24,202.797,121.92,33,Unstable,1,TRUE,TRUE
+65,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,12.2010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),55.29,0.6500,214.5,-177.02,424.613,255.28,33,Unstable,1,TRUE,TRUE
+66,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,12.4010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),55.84,0.6500,214.5,-122.77,18.755,11.27,33,Unstable,1,TRUE,TRUE
+67,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,12.6010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),57.07,0.6500,214.5,-15.14,116.048,69.77,33,Unstable,1,TRUE,TRUE
+68,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,12.8010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),58.14,0.6500,214.5,171.01,490.944,295.18,33,Unstable,1,TRUE,TRUE
+69,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,13.0010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),59.26,0.6500,214.5,73.58,405.005,243.49,33,Unstable,1,TRUE,TRUE
+70,ETAP_S1_Unstable,Oluseyi_et_al_NIJOTECH_2017,13.2010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),0.00,0.0000,0.0,0.00,0.000,0.00,33,Collapse,2,TRUE,TRUE
+71,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,15.0000,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,1.0000,330.0,20.10,441.582,265.44,33,Pre_Fault,0,TRUE,TRUE
+72,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,15.5010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.00,0.9700,320.1,20.10,472.971,284.32,33,Fault_Onset,1,TRUE,TRUE
+73,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,15.7010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.39,0.8500,280.5,-5.65,446.980,268.70,33,Unstable,1,TRUE,TRUE
+74,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,15.9010,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),49.32,0.8500,280.5,-55.06,381.958,229.63,33,Unstable,1,TRUE,TRUE
+75,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,16.1510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.24,0.8500,280.5,-73.84,367.454,220.90,33,Unstable,1,TRUE,TRUE
+76,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,16.5510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.90,0.8500,280.5,0.79,334.456,201.07,33,Unstable,1,TRUE,TRUE
+77,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,16.7510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),51.16,0.8500,280.5,82.27,520.867,313.16,33,Unstable,1,TRUE,TRUE
+78,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,17.1510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),50.39,0.8500,280.5,128.57,424.611,255.28,33,Unstable,1,TRUE,TRUE
+79,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,17.3510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),48.85,0.8500,280.5,119.50,804.425,483.38,33,Unstable,1,TRUE,TRUE
+80,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,17.5510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),48.98,0.8500,280.5,11.40,145.274,87.33,33,Unstable,1,TRUE,TRUE
+81,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,21.3510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),57.34,0.6500,214.5,40.82,240.956,144.83,33,Unstable,1,TRUE,TRUE
+82,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,21.5510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),57.15,0.6500,214.5,-156.23,316.977,190.47,33,Unstable,1,TRUE,TRUE
+83,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,21.7510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),58.15,0.6500,214.5,37.31,321.793,193.42,33,Unstable,1,TRUE,TRUE
+84,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,22.1510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),58.81,0.6500,214.5,-176.66,634.131,381.20,33,Unstable,1,TRUE,TRUE
+85,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,22.3510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),59.41,0.6500,214.5,125.20,740.562,445.18,33,Unstable,1,TRUE,TRUE
+86,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,22.5510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),59.83,0.5672,187.2,89.47,577.506,347.17,33,Unstable,1,TRUE,TRUE
+87,ETAP_S2_Unstable,Oluseyi_et_al_NIJOTECH_2017,22.7510,Ikeja_West_Egbin_Bus,Ikeja-West (Egbin Generator),0.00,0.0000,0.0,0.00,0.000,0.00,33,Collapse,2,TRUE,TRUE
+88,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_01,Egbin_PS,50.00,1.0200,336.6,0.0000,0.0,0.0,33,Stable,0,FALSE,FALSE
+89,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_02,Jebba_HT,50.00,0.9900,326.7,-2.9559,0.0,0.0,33,Stable,0,FALSE,FALSE
+90,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_03,Shiroro_PS,50.00,1.0000,330.0,-2.3820,0.0,0.0,33,Stable,0,FALSE,FALSE
+91,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_04,Afam_PS,50.00,1.0000,330.0,-8.9140,0.0,0.0,33,Stable,0,FALSE,FALSE
+92,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_05,Kainji_PS,50.00,1.0300,339.9,7.0762,0.0,0.0,33,Stable,0,FALSE,FALSE
+93,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_06,Jebba_PS,50.00,1.0400,343.2,7.3865,0.0,0.0,33,Stable,0,FALSE,FALSE
+94,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_07,Jebba_TS,50.00,1.0300,339.9,9.5870,0.0,0.0,33,Stable,0,FALSE,FALSE
+95,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_08,Benin,50.00,0.9953,328.4,-5.0357,156.0,79.9,33,Stable,0,FALSE,FALSE
+96,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_09,Shiroro_TS,50.00,1.0402,343.3,4.6449,8.6,5.6,33,Stable,0,FALSE,FALSE
+97,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_10,Ikeja_West,50.00,0.9816,323.9,-5.6930,429.9,258.4,33,Stable,0,FALSE,FALSE
+98,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_11,Oshogbo,50.00,1.0160,335.3,-0.5566,201.0,136.7,33,Stable,0,FALSE,FALSE
+99,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_12,Kaduna,50.00,1.0337,341.1,-1.1701,166.2,97.8,33,Stable,0,FALSE,FALSE
+100,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_13,Jos,50.00,1.0632,350.9,-6.4503,58.4,28.4,33,Stable,0,FALSE,FALSE
+101,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_14,Egbin_TS,50.00,0.9777,322.6,-11.2587,144.7,88.4,33,Warning,1,FALSE,FALSE
+102,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_15,Onitsha,50.00,0.9730,321.1,-10.8277,115.2,42.0,33,Warning,1,FALSE,FALSE
+103,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_16,Aladja_TS,50.00,0.9960,328.7,-4.8273,82.1,44.5,33,Stable,0,FALSE,FALSE
+104,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_17,Ajaokuta,50.00,0.9575,315.9,-12.7112,112.6,50.0,33,Stressed,1,FALSE,FALSE
+105,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_18,Kano,50.00,0.9941,328.1,-8.0840,184.9,60.0,33,Stable,0,FALSE,FALSE
+106,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_19,Gombe,50.00,1.0745,354.6,-10.6699,102.9,17.5,33,Stable,0,FALSE,FALSE
+107,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_20,BirninKebbi,50.00,1.0212,337.0,2.0303,60.3,70.0,33,Stable,0,FALSE,FALSE
+108,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_21,Akangba,50.00,1.0058,331.9,-6.0171,26.8,10.5,33,Stable,0,FALSE,FALSE
+109,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_22,Alaoji,50.00,0.9775,322.6,-6.1333,292.0,114.9,33,Warning,1,FALSE,FALSE
+110,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_23,Aja,50.00,0.9977,329.2,-3.2197,193.5,101.2,33,Stable,0,FALSE,FALSE
+111,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_24,Ayede,50.00,0.9927,327.6,-4.1225,139.4,61.0,33,Stable,0,FALSE,FALSE
+112,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_25,Delta_PS_ref,50.00,1.0003,330.1,-3.0052,109.7,64.2,33,Stable,0,FALSE,FALSE
+113,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_26,Sepele_TS,50.00,0.9956,328.5,-4.3557,0.0,0.0,33,Stable,0,FALSE,FALSE
+114,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_27,Delta_TS,50.00,0.9993,329.8,-4.6754,64.3,44.2,33,Stable,0,FALSE,FALSE
+115,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_28,Afam_TS,50.00,0.9810,323.7,-10.9908,119.3,65.7,33,Warning,1,FALSE,FALSE
+116,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_29,Shiroro_TS2,50.00,1.0413,343.6,2.7845,61.5,10.3,33,Stable,0,FALSE,FALSE
+117,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_30,Kainji_TS,50.00,1.0445,344.7,4.8916,0.0,0.0,33,Stable,0,FALSE,FALSE
+118,Nigeria31Bus_Static,Oluseyi_et_al_AZOJETE_2018,static,Bus_31,Jebba_TS2,50.00,1.0401,343.2,4.9320,0.0,0.0,33,Stable,0,FALSE,FALSE
+119,Sample_NationalGrid,Project_Description_Sample,2026-05-09 10:00,National_Grid,Nigeria National Grid (Total),50.02,1.0003,330.1,,4200.0,1100.0,32,Stable,0,FALSE,FALSE
+120,Sample_NationalGrid,Project_Description_Sample,2026-05-09 10:01,National_Grid,Nigeria National Grid (Total),49.95,0.9955,328.5,,4250.0,1150.0,32,Stable,0,FALSE,FALSE
+121,Sample_NationalGrid,Project_Description_Sample,2026-05-09 10:02,National_Grid,Nigeria National Grid (Total),49.80,0.9848,325.0,,4400.0,1300.0,33,Unstable,1,FALSE,FALSE
+122,Sample_NationalGrid,Project_Description_Sample,2026-05-09 10:03,National_Grid,Nigeria National Grid (Total),48.50,0.9400,310.2,,3100.0,900.0,33,Collapse,2,FALSE,FALSE
+123,Sample_NationalGrid,Project_Description_Sample,2026-05-09 10:04,National_Grid,Nigeria National Grid (Total),0.00,0.0000,0.0,,10.0,0.0,33,Blackout,2,FALSE,FALSE
