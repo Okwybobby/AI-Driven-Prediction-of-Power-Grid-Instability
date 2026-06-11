@@ -1511,7 +1511,7 @@ def page_11():
 
     show_df = alerts_df.copy()
     show_df = show_df.round(4)
-    styled  = show_df.style.applymap(
+    styled  = show_df.style.map(
         lambda v: "background-color: rgba(231,76,60,0.35)" if v=="CRITICAL"
                   else ("background-color: rgba(243,156,18,0.25)" if v=="WARNING" else ""),
         subset=["Alert"]
