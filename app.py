@@ -24,6 +24,7 @@ from sklearn.metrics import (
     classification_report, confusion_matrix,
     roc_auc_score, roc_curve, f1_score
 )
+from sklearn.neural_network import MLPClassifier
 
 # ── Optional dependencies ──────────────────────────────────────────────────────
 try:
@@ -38,14 +39,6 @@ try:
 except ImportError:
     HAS_IMBLEARN = False
 
-try:
-    import tensorflow as tf
-    from tensorflow.keras import Sequential
-    from tensorflow.keras.layers import LSTM, Dense, Dropout, BatchNormalization, Bidirectional
-    from tensorflow.keras.callbacks import EarlyStopping
-    HAS_TF = True
-except Exception:
-    HAS_TF = False
 
 # ── Constants ──────────────────────────────────────────────────────────────────
 CSV_AUG  = "https://raw.githubusercontent.com/Okwybobby/AI-Driven-Prediction-of-Power-Grid-Instability/refs/heads/main/nigeria_grid_stability_main.csv"
@@ -73,7 +66,7 @@ PAGE_TITLES = [
     "Logistic Regression",
     "Random Forest",
     "XGBoost / GBM",
-    "LSTM Deep Learning",
+    "MLP Neural Network",
     "Model Comparison",
     "Seed Dataset Validation",
     "Alert System",
@@ -530,7 +523,7 @@ def page_0():
             "Plotly":           True,
             "XGBoost":          HAS_XGB,
             "imbalanced-learn": HAS_IMBLEARN,
-            "TensorFlow":       HAS_TF,
+            "MLP (sklearn)":    True,
         }
         for dep, ok in deps.items():
             icon = "✅" if ok else "⚠️ (optional)"
@@ -769,7 +762,10 @@ def page_3():
 
     if st.button("🔧 Apply Feature Engineering", type="primary"):
         df      = st.session_state.df
-        df_seed = st.session_state.df_seed
+        df_seed = st.session_state.df_seed.copy()
+        # Seed dataset lacks ROCOF_Hz_per_s — fill with 0 before engineering
+        if "ROCOF_Hz_per_s" not in df_seed.columns:
+            df_seed["ROCOF_Hz_per_s"] = 0.0
         st.session_state.df_eng      = engineer_features(df)
         st.session_state.df_seed_eng = engineer_features(df_seed)
         mark_complete(3)
@@ -900,7 +896,7 @@ def page_5():
 
         model = LogisticRegression(
             max_iter=2000, random_state=rs,
-            class_weight=cw, multi_class="multinomial", solver="lbfgs"
+            class_weight=cw, solver="lbfgs"
         )
         model.fit(X_tr, y_tr)
         y_pred  = model.predict(X_te)
@@ -1154,94 +1150,75 @@ def page_7():
 
 # ── Page 8 ────────────────────────────────────────────────────
 def page_8():
-    st.markdown('<div class="main-header">🧠 LSTM Deep Learning</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">🧠 MLP Neural Network</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">Multi-Layer Perceptron — a fully-connected feedforward neural network. No GPU or TensorFlow required.</div>', unsafe_allow_html=True)
 
-    if not HAS_TF:
-        st.error("TensorFlow is not installed. Install it with:")
-        st.code("pip install tensorflow", language="bash")
-        st.info("You can still complete the pipeline — LSTM results will be absent from comparison pages.")
-        mark_complete(8)
-        return
-
-    if st.session_state.X_train_sc is None:
+    if st.session_state.X_train_sm is None:
         st.warning("⚠️ Please run Preprocessing first (Page 4).")
         return
 
-    cfg     = st.session_state.config
-    win     = st.slider("LSTM Window", 5, 50, cfg.get("LSTM_WINDOW",20), key="lstm_win")
-    epochs  = st.slider("Epochs",      10, 200, 50,  step=10,  key="lstm_ep")
-    batch   = st.slider("Batch Size",  16, 256, 64,  step=16,  key="lstm_bs")
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        arch_choice = st.selectbox("Hidden Layers",
+            ["(64, 32)", "(128, 64, 32)", "(256, 128, 64)", "(128, 64, 32, 16)"],
+            index=1, key="mlp_arch")
+    with c2:
+        activation = st.selectbox("Activation Function", ["relu", "tanh"], key="mlp_act")
+    with c3:
+        lr_init = st.select_slider("Learning Rate",
+            options=[0.0001, 0.0005, 0.001, 0.005, 0.01], value=0.001, key="mlp_lr")
+
+    hidden_layers = tuple(int(x.strip()) for x in arch_choice.strip("()").split(","))
 
     # Architecture table
-    st.markdown("### Model Architecture")
-    arch_df = pd.DataFrame([
-        ("Input",             f"(None, {win}, {len(ENG_FEATURES)})", "—"),
-        ("Bidirectional LSTM-1","(None, {win}, 128)",               "66,048"),
-        ("Dropout 0.30",      "—",                                  "0"),
-        ("Bidirectional LSTM-2","(None, 64)",                       "41,216"),
-        ("BatchNorm",         "(None, 64)",                         "256"),
-        ("Dropout 0.25",      "—",                                  "0"),
-        ("Dense 32 relu",     "(None, 32)",                         "2,080"),
-        ("Dense 3 softmax",   "(None, 3)",                          "99"),
-    ], columns=["Layer","Output Shape","Params"])
-    st.dataframe(arch_df, use_container_width=True)
+    arch_rows = [{"Layer": "Input", "Size": f"{len(ENG_FEATURES)} features", "Activation": "—"}]
+    for i, n in enumerate(hidden_layers):
+        arch_rows.append({"Layer": f"Hidden {i+1}", "Size": f"{n} neurons", "Activation": activation})
+    arch_rows.append({"Layer": "Output", "Size": "3 classes", "Activation": "softmax"})
+    st.dataframe(pd.DataFrame(arch_rows), use_container_width=True, hide_index=True)
 
-    if st.button("🧠 Train BiLSTM", type="primary"):
-        X_tr_sc = st.session_state.X_train_sc
-        y_tr    = st.session_state.y_train
-        X_te_sc = st.session_state.X_test_sc
-        y_te    = st.session_state.y_test
-        rs      = st.session_state.config.get("RANDOM_STATE", 42)
+    if st.button("🧠 Train MLP Neural Network", type="primary"):
+        rs   = st.session_state.config.get("RANDOM_STATE", 42)
+        X_tr = st.session_state.X_train_sm
+        y_tr = st.session_state.y_train_sm
+        X_te = st.session_state.X_test_sc
+        y_te = st.session_state.y_test
 
-        with st.spinner("Building sequences and training BiLSTM…"):
-            X_seq_tr, y_seq_tr = build_sequences(X_tr_sc, y_tr, win)
-            X_seq_te, y_seq_te = build_sequences(X_te_sc, y_te, win)
-
-            n_feat = X_seq_tr.shape[2]
-            model  = Sequential([
-                Bidirectional(LSTM(64, return_sequences=True, input_shape=(win, n_feat))),
-                Dropout(0.30),
-                Bidirectional(LSTM(32)),
-                BatchNormalization(),
-                Dropout(0.25),
-                Dense(32, activation="relu"),
-                Dense(3,  activation="softmax"),
-            ])
-            model.compile(
-                optimizer="adam",
-                loss="sparse_categorical_crossentropy",
-                metrics=["accuracy"]
+        with st.spinner("Training MLP Neural Network (early stopping enabled)…"):
+            model = MLPClassifier(
+                hidden_layer_sizes=hidden_layers,
+                activation=activation,
+                solver="adam",
+                learning_rate_init=lr_init,
+                max_iter=500,
+                early_stopping=True,
+                validation_fraction=0.15,
+                n_iter_no_change=20,
+                random_state=rs
             )
-            es = EarlyStopping(monitor="val_loss", patience=10, restore_best_weights=True)
-            history = model.fit(
-                X_seq_tr, y_seq_tr,
-                epochs=epochs, batch_size=batch,
-                validation_split=0.15,
-                callbacks=[es],
-                verbose=0
-            )
+            model.fit(X_tr, y_tr)
 
-        y_proba  = model.predict(X_seq_te, verbose=0)
-        y_pred   = np.argmax(y_proba, axis=1)
+        y_pred  = model.predict(X_te)
+        y_proba = model.predict_proba(X_te)
 
         st.session_state.lstm_model   = model
-        st.session_state.lstm_history = history.history
+        st.session_state.lstm_history = {"loss": model.loss_curve_}
         st.session_state.y_pred_lstm  = y_pred
         st.session_state.y_proba_lstm = y_proba
-        st.session_state.y_seq_te     = y_seq_te
+        st.session_state.y_seq_te     = y_te
 
-        y_bin = label_binarize(y_seq_te, classes=[0,1,2])
+        y_bin = label_binarize(y_te, classes=[0,1,2])
         auc   = roc_auc_score(y_bin, y_proba, average="macro", multi_class="ovr")
-        f1m   = f1_score(y_seq_te, y_pred, average="macro")
-        rpt   = classification_report(y_seq_te, y_pred, target_names=LABEL_NAMES, output_dict=True)
+        f1m   = f1_score(y_te, y_pred, average="macro")
+        rpt   = classification_report(y_te, y_pred, target_names=LABEL_NAMES, output_dict=True)
         rec_c = rpt.get("Collapse",{}).get("recall",0)
-        st.session_state.results["BiLSTM"] = dict(
+        st.session_state.results["MLP Neural Net"] = dict(
             AUC_macro=auc, F1_macro=f1m,
             F1_Collapse=rpt.get("Collapse",{}).get("f1-score",0),
             Recall_Collapse=rec_c, model=model
         )
         mark_complete(8)
-        st.success("BiLSTM trained!")
+        st.success(f"MLP trained — converged in {len(model.loss_curve_)} iterations!")
 
     if st.session_state.lstm_history is None:
         return
@@ -1251,14 +1228,14 @@ def page_8():
     y_pred = st.session_state.y_pred_lstm
     y_prob = st.session_state.y_proba_lstm
 
-    # Training curves
-    epochs_ran = list(range(1, len(hist["loss"])+1))
-    fig = make_subplots(rows=1, cols=2, subplot_titles=["Loss","Accuracy"])
-    for col_i, metric in enumerate(["loss","accuracy"], 1):
-        fig.add_trace(go.Scatter(x=epochs_ran, y=hist[metric],        name=f"Train {metric}",  line=dict(color="#2563EB")), row=1, col=col_i)
-        fig.add_trace(go.Scatter(x=epochs_ran, y=hist[f"val_{metric}"],name=f"Val {metric}",   line=dict(color="#059669", dash="dash")), row=1, col=col_i)
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        y=hist["loss"], mode="lines",
+        name="Training Loss", line=dict(color="#2563EB", width=2)
+    ))
     dark_fig(fig)
-    fig.update_layout(title="Training Curves", height=350)
+    fig.update_layout(title="MLP Training Loss per Iteration",
+                      xaxis_title="Iteration", yaxis_title="Loss", height=300)
     st.plotly_chart(fig, use_container_width=True)
 
     rpt   = classification_report(y_seq, y_pred, target_names=LABEL_NAMES, output_dict=True)
@@ -1271,8 +1248,11 @@ def page_8():
     metric_card("Macro AUC-ROC",   f"{auc:.3f}", c1)
     metric_card("Macro F1",        f"{f1m:.3f}", c2)
     metric_card("Collapse Recall", f"{rec_c:.3f}", c3)
-
-    st.plotly_chart(confusion_heatmap(y_seq, y_pred, "BiLSTM Confusion Matrix"), use_container_width=True)
+    sep()
+    rpt_df = pd.DataFrame(rpt).T.round(3)
+    st.dataframe(rpt_df, use_container_width=True)
+    sep()
+    st.plotly_chart(confusion_heatmap(y_seq, y_pred, "MLP Confusion Matrix"), use_container_width=True)
 
 # ── Page 9 ────────────────────────────────────────────────────
 def page_9():
