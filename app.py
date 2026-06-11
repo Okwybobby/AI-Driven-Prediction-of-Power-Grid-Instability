@@ -237,14 +237,43 @@ div[data-testid="stDataFrame"] { border-radius: 8px; overflow: hidden; }
     box-shadow: 0 1px 6px rgba(0,0,0,0.05);
 }
 
-/* ── Buttons: primary blue ── */
-button[kind="primary"] {
+/* ── Buttons: force styles on all devices including mobile ── */
+[data-testid="stBaseButton-secondary"],
+[data-testid="stBaseButton-secondary"] > button,
+button[kind="secondary"],
+div.stButton > button {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    background-color: #FFFFFF !important;
+    color: #1E3A5F !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 8px !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+div.stButton > button:hover,
+div.stButton > button:focus,
+div.stButton > button:active {
+    background-color: #F1F5F9 !important;
+    color: #1E3A5F !important;
+    border-color: #2563EB !important;
+}
+[data-testid="stBaseButton-primary"],
+[data-testid="stBaseButton-primary"] > button,
+button[kind="primary"],
+div.stButton > button[kind="primary"] {
+    -webkit-appearance: none !important;
+    appearance: none !important;
     background-color: #2563EB !important;
     color: #FFFFFF !important;
+    border: none !important;
     border-radius: 8px !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
-button[kind="primary"]:hover {
+button[kind="primary"]:hover,
+button[kind="primary"]:active,
+button[kind="primary"]:focus {
     background-color: #1D4ED8 !important;
+    color: #FFFFFF !important;
 }
 
 /* ── Info / success / warning boxes ── */
