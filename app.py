@@ -1048,8 +1048,8 @@ def page_7():
         st.warning("⚠️ Please run Preprocessing first (Page 4).")
         return
 
-    n_est  = st.slider("n_estimators", 50, 500, 200, step=50, key="xgb_n")
-    max_d  = st.slider("max_depth", 2, 10, 5, key="xgb_d")
+    n_est  = st.slider("n_estimators", 50, 300, 100, step=50, key="xgb_n")
+    max_d  = st.slider("max_depth", 2, 8, 4, key="xgb_d")
     lr_val = st.slider("learning_rate", 0.01, 0.50, 0.10, step=0.01, key="xgb_lr")
 
     if st.button("🚀 Train XGBoost/GBM", type="primary"):
@@ -1064,7 +1064,7 @@ def page_7():
             sw = np.array([cw[yi] for yi in y_tr])
             model = xgb.XGBClassifier(
                 n_estimators=n_est, max_depth=max_d,
-                learning_rate=lr_val, use_label_encoder=False,
+                learning_rate=lr_val,
                 eval_metric="mlogloss", random_state=rs, n_jobs=-1
             )
             model.fit(X_tr, y_tr, sample_weight=sw)
